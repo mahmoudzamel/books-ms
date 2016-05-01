@@ -7,7 +7,7 @@ node("cd") {
 
     def flow = load "/data/scripts/workflow-util.groovy"
 
-    git url: "https://github.com/vfarcic/${serviceName}.git"
+    git url: "https://github.com/mahmoudzamel/${serviceName}.git"
     flow.provision("prod2.yml")
     flow.buildTests(serviceName, registryIpPort)
     flow.runTests(serviceName, "tests", "")
